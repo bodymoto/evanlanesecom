@@ -1,5 +1,4 @@
 import {LitElement, html, css} from 'lit';
-import {FooterElement} from './footer-element.js';
 
 export class NavElement extends LitElement {
 	static styles = css`
