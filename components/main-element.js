@@ -1,7 +1,7 @@
-import {LitElement, html, css} from 'lit';
+import { LitElement, html, css } from 'lit';
 
 export class MainElement extends LitElement {
-	static styles = css`
+  static styles = css`
 		* {
 	      margin: 0;
 	      padding: 0;
@@ -17,13 +17,14 @@ export class MainElement extends LitElement {
     	}
 	  #test {
 		  	position: relative;
+		  	height: 90vh;
 		  }
     video {
     		position: absolute;
-	    	top: 0;
-	    	right: 0;
-	    	bottom: 0;
-	    	left: 0;
+    		object-fit: cover;
+	    	width: 100%;
+	    	height: 100%;
+	    	z-index: -1;
 	    }
     #test div {
 	      border: 1px solid black;
@@ -34,17 +35,20 @@ export class MainElement extends LitElement {
 		  	text-transform: uppercase;
 		  	padding: 2px;
 		  }
+		img {
+				display: block;
+			}
 	`;
 
-	constructor() {
-		super();
-	}
+  constructor () {
+    super();
+  }
 
-	render() {
-		return html`
+  render () {
+    return html`
 		<div id="test">
-			<video>
-				<source router-ignore src="pexels-colors-motion-graphics-13648275-960x540-30fps.mp4" type="video/mp4">
+			<video autoplay loop muted>
+				<source router-ignore src="https://player.vimeo.com/progressive_redirect/playback/744700964/rendition/540p/file.mp4?loc=external&oauth2_token_id=57447761&signature=0d1140355d407ef25c1885135c3d5475c0fd7e434101ec5d256e95d34e9d8fa1" type="video/mp4">
 			</video>
 			<div>
 				<p>evan lanese</p>
@@ -63,7 +67,7 @@ export class MainElement extends LitElement {
 			</div>
 		</div>
 		`;
-	}
+  }
 }
 
 customElements.define('main-element', MainElement);
