@@ -47,9 +47,6 @@ export class NavElement extends LitElement {
 	  <main>
 	  	<slot></slot>
 	  </main>
-
-	  <footer>
-	  </footer>
 		`;
 	}
 }
