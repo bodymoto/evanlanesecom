@@ -27,6 +27,7 @@ export class MainElement extends LitElement {
 	    	z-index: -1;
 	    }
     #test div {
+    		background: url(colo.png);
 	      border: 1px solid black;
     		margin: 5px;
 	    	padding: 20px;
@@ -48,7 +49,7 @@ export class MainElement extends LitElement {
     return html`
 		<div id="test">
 			<video autoplay loop muted>
-				<source router-ignore src="https://player.vimeo.com/progressive_redirect/playback/744700964/rendition/540p/file.mp4?loc=external&oauth2_token_id=57447761&signature=0d1140355d407ef25c1885135c3d5475c0fd7e434101ec5d256e95d34e9d8fa1" type="video/mp4">
+				<source router-ignore src="pexels-stijn-dijkstra-13008655-720x1080-25fps.mp4" type="video/mp4">
 			</video>
 			<div>
 				<p>evan lanese</p>
