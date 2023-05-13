@@ -9,12 +9,17 @@ export class MainElement extends LitElement {
     	}
     a:link,
     a:visited,
-    a:hover,
     a:active {
     		color: black;
     		text-decoration: none;
     		text-transform: uppercase;
     	}
+    a:hover {
+    		color: darkorange;
+    		font-weight: 700;
+	    	transition: 0.3s;
+	    	transform: scale(1.1);
+	    }
 	  #body {
 		  	position: relative;
 		  	height: 90vh;
@@ -27,90 +32,102 @@ export class MainElement extends LitElement {
 	    	z-index: -1;
 	    }
 	  section {
-		  	width: 220px;
 		  	margin: 5px;
 		  	padding-top: 60px;
 		  	text-transform: uppercase;
 		  }
-    .box {
-	      border: 2px solid #fff;
-	      border-radius: 10px;
-	    	padding: 3px;
-	    }
 		#grid {
 				display: grid;
 				gap: 5px;
-				grid-template-columns: 1fr 100px;
-				grid-template-rows: 1fr 30px 30px 30px;
+				grid-template-columns: 1fr 25%;
+				grid-template-rows: 1fr 40px 40px 40px;
 				grid-template-areas:
 					"a e"
 					"b e"
 					"c e"
 					"d e";
 			}
-		#grid p {
-				padding: 5px;
-			}
 		.intro, .bodyboon, .github, .social {
 				display: flex;
 				flex-direction: column;
+				align-items: center;
 				justify-content: center;
+				padding: 5px;
 			}
 		.intro, .bodyboon, .github, .social, .skill {
 				background: #fff;
 				border-radius: 5px;
+				width: 100%;
 			}
 		.intro {
 				grid-area: a;
-				padding: 10px;
-				width: 100%;
 			}
 		.intro h1 {
-				font-size: 28px;
+				font-size: 32px;
 				font-weight: 200;
-				padding: 5px;
 				margin-bottom: -10px;
 			}
 		.intro h2 {
 				font-size: 18px;
 				font-weight: 400;
 				padding: 7px;
+				margin-left: 12px;
 				margin-bottom: -10px;
 			}
 		.intro p {
 				font-size: 14px;
-				margin-left: 18px;
+				margin-left: 30px;
+				opacity: 0.6;
 			}
 		.bodyboon {
 				grid-area: b;
-				width: 100%;
 			}
 		.github {
 				grid-area: c;
-				width: 100%;
 			}
 		.social {
 				grid-area: d;
-				width: 100%;
 			}
 		.bodyboon p, .github p, .social p {
 				font-size: 13px;
 			}
-
 		.skill {
 				grid-area: e;
 				font-size: 14px;
 				text-align: center;
-				text-transform: uppercase;
-				width: 100%;
 				margin: auto;
-				padding: 10px 0;
+				padding: 20px 0;
 			}
 		ul {
 				list-style-type: none;
 			}
 		li {
 				padding: 3px 0;
+			}
+
+		#image {
+				margin: auto;
+				margin-top: 75px;
+				width: 300px;
+				height: 300px;
+			}
+		img {
+				animation: ghost 12s infinite alternate ease;
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+			}
+
+		@keyframes ghost {
+				from {
+					opacity: 0;
+				}
+				30% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0.8;
+				}
 			}
 
 		@media screen and (min-width: 768px) {
@@ -135,44 +152,41 @@ export class MainElement extends LitElement {
 			</div>
 
 			<section>
-				<div class="box">
-				<div class="box">
-				<div class="box">
-					<div id="grid">
-						<div class="intro">
-							<h1>evan lanese</h1>
-							<h2>software developer</h2>
-							<p>front-end application</p>
-						</div>
+				<div id="grid">
+					<div class="intro">
+						<h1>evan lanese</h1>
+						<h2>software developer</h2>
+						<p>front-end application</p>
+					</div>
 
-						<div class="bodyboon">
-							<a router-ignore href="https://bodyboon.com"><p>www.bodyboon.com</p></a>
-						</div>
-						<div class="github">
-							<a router-ignore href="https://github.com/boshimoto"><p>www.github.com/boshimoto</p></a>
-						</div>
-						<div class="social">
-							<a router-ignore href="https://linkedin.com/in/evanlanese"><p>www.linkedin.com/in/evanlanese</p></a>
-						</div>
+					<div class="bodyboon">
+						<a router-ignore href="https://bodyboon.com" target="_blank"><p>www.<b>bodyboon</b>.com (latest work)</p></a>
+					</div>
+					<div class="github">
+						<a router-ignore href="https://github.com/boshimoto" target="_blank"><p>www.<b>github</b>.com</p></a>
+					</div>
+					<div class="social">
+						<a router-ignore href="https://linkedin.com/in/evanlanese" target="_blank"><p>www.<b>linkedin</b>.com</p></a>
+					</div>
 
-						<div class="skill">
-							<ul>
-								<li>javascript</li>
-								<li>html/css</li>
-								<li>lit</li>
-								<li>express</li>
-								<li>node</li>
-								<li>git</li>
-								<li>webpack</li>
-								<li>babel</li>
-								<li>web components</li>
-							</ul>
-						</div>
+					<div class="skill">
+						<ul>
+							<li>javascript</li>
+							<li>html/css</li>
+							<li>lit</li>
+							<li>express</li>
+							<li>node</li>
+							<li>git</li>
+							<li>webpack</li>
+							<li>babel</li>
+							<li>web components</li>
+						</ul>
 					</div>
 				</div>
-				</div>
-				</div>
 			</section>
+			<div id="image">
+				<img src="../img/colo.png" alt="" />
+			</div>
 		</div>
 		`;
   }
