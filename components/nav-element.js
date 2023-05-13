@@ -25,6 +25,10 @@ export class NavElement extends LitElement {
     		padding: 20px;
     		font-size: 20px;
     	}
+    .nav-bar p {
+    		font-size: 22px;
+	    	letter-spacing: -0.8px;
+	    }
     nav {
 	    	display: flex;
 	    	gap: 15px;
@@ -38,7 +42,7 @@ export class NavElement extends LitElement {
 	render() {
 		return html`
 		<header class="nav-bar">
-			<a href="/">helloevan.dev</a>
+			<a href="/"><p>helloevan.dev</p></a>
 			<nav>
 				<a href="/">home</a>
 	  		<a href="/about">about</a>
