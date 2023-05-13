@@ -133,7 +133,7 @@ export class MainElement extends LitElement {
 					<source src="../video/pexels-lam-loi-3492325-1280x720-31fps.mp4">
 				</video>
 			</div>
-			
+
 			<section>
 				<div class="box">
 				<div class="box">
@@ -146,13 +146,13 @@ export class MainElement extends LitElement {
 						</div>
 
 						<div class="bodyboon">
-							<a href="https://bodyboon.com"><p>www.bodyboon.com</p></a>
+							<a router-ignore href="https://bodyboon.com"><p>www.bodyboon.com</p></a>
 						</div>
 						<div class="github">
-							<a href="https://github.com/boshimoto"><p>www.github.com/boshimoto</p></a>
+							<a router-ignore href="https://github.com/boshimoto"><p>www.github.com/boshimoto</p></a>
 						</div>
 						<div class="social">
-							<a href="https://linkedin.com/in/evanlanese"><p>www.linkedin.com/in/evanlanese</p></a>
+							<a router-ignore href="https://linkedin.com/in/evanlanese"><p>www.linkedin.com/in/evanlanese</p></a>
 						</div>
 
 						<div class="skill">
