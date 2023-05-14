@@ -7,14 +7,21 @@ export class AboutElement extends LitElement {
 	      padding: 0;
 	      box-sizing: border-box;
     	}
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-    		color: black;
-    		text-decoration: none;
-    		text-transform: uppercase;
-    	}
+
+    #flex {
+    		display: flex;
+    		justify-content: space-evenly;
+	    }
+    #image {
+	    	border: 1px solid black;
+	    	width: 160px;
+	    }
+	  img {
+		  	border-radius: 50%;
+		  	border: 1px solid black;
+		  	width: 100%;
+		  	height: 100%;
+		  }
 	`;
 
 	constructor() {
@@ -23,7 +30,14 @@ export class AboutElement extends LitElement {
 
 	render() {
 		return html`
-		ABOUT
+		<main>
+			<div id="flex">
+				<div>This is me.</div>
+				<div id="image">
+					<img src="../img/bigblue.png" alt="An abstract self-portrait." />
+				</div>
+			</div>
+		</main>
 		`;
 	}
 }
