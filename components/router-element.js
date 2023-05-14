@@ -1,6 +1,7 @@
 import {LitElement, html, css} from 'lit';
 import {NavElement} from './nav-element.js';
 
+
 export class RouterElement extends LitElement {
 	static styles = css`
 		* {
