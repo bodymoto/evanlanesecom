@@ -17,7 +17,7 @@ export class NavElement extends LitElement {
     		letter-spacing: .7px;
     	}
 
-    .nav-bar {
+    header {
     		height: 10vh;
     		display: flex;
     		align-items: center;
@@ -25,7 +25,7 @@ export class NavElement extends LitElement {
     		padding: 20px;
     		font-size: 20px;
     	}
-    .nav-bar p {
+    header p {
     		font-size: 22px;
 	    	letter-spacing: -0.8px;
 	    }
@@ -41,17 +41,13 @@ export class NavElement extends LitElement {
 
 	render() {
 		return html`
-		<header class="nav-bar">
+		<header>
 			<a href="/"><p>helloevan.dev</p></a>
 			<nav>
 				<a href="/">home</a>
 	  		<a href="/about">about</a>
 	  	</nav>
 	  </header>
-
-	  <main>
-	  	<slot></slot>
-	  </main>
 		`;
 	}
 }

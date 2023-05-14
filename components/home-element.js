@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-export class MainElement extends LitElement {
+export class HomeElement extends LitElement {
   static styles = css`
 		* {
 	      margin: 0;
@@ -20,7 +20,7 @@ export class MainElement extends LitElement {
 	    	transition: 0.3s;
 	    	transform: scale(1.1);
 	    }
-	  #body {
+	  main {
 		  	position: relative;
 		  	height: 90vh;
 		  }
@@ -113,7 +113,7 @@ export class MainElement extends LitElement {
 			}
 		img {
 				animation: ghost 12s infinite alternate ease;
-				border-radius: 10px;
+				border-radius: 50%;
 				width: 100%;
 				height: 100%;
 			}
@@ -131,7 +131,7 @@ export class MainElement extends LitElement {
 			}
 
 		@media screen and (min-width: 768px) {
-			#body {
+			main {
 				min-height: 768px;
 		  	max-height: 1024px;
 		  }
@@ -144,7 +144,7 @@ export class MainElement extends LitElement {
 
   render () {
     return html`
-		<div id="body">
+		<main>
 			<div>
 				<video autoplay loop muted>
 					<source src="../video/pexels-lam-loi-3492325-1280x720-31fps.mp4">
@@ -185,11 +185,11 @@ export class MainElement extends LitElement {
 				</div>
 			</section>
 			<div id="image">
-				<img src="../img/colo.png" alt="" />
+				<img src="../img/colo.png" alt="Hiking in the Colorado Mountains." />
 			</div>
-		</div>
+		</main>
 		`;
   }
 }
 
-customElements.define('main-element', MainElement);
+customElements.define('home-element', HomeElement);

@@ -17,6 +17,10 @@ app.get("/img/colo.png", (req, res) => {
   res.sendFile(path.join(__dirname, "/img/colo.png"));
 });
 
+app.get("/img/bigblue.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "/img/bigblue.png"));
+});
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));

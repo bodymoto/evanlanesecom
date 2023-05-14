@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
-import { NavElement } from '../components/nav-element.js';
-import { MainElement } from '../components/main-element.js';
+import { RouterElement } from '../components/router-element.js';
+import { HomeElement } from '../components/home-element.js';
 import { AboutElement } from '../components/about-element.js';
 
 
@@ -8,9 +8,9 @@ const outlet = document.getElementById('outlet');
 const router = new Router(outlet);
 
 router.setRoutes([
-  {path: '/', component: 'nav-element', children: [
-    {path: '/', component: 'main-element'},
-    {path: '/home', component: 'main-element'},
+  {path: '/', component: 'router-element', children: [
+    {path: '/', component: 'home-element'},
+    {path: '/home', component: 'home-element'},
     {path: '/about', component: 'about-element'},
     ]
   },
