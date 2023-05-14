@@ -21,7 +21,11 @@ app.get("/img/bigblue.png", (req, res) => {
   res.sendFile(path.join(__dirname, "/img/bigblue.png"));
 });
 
+app.get("/img/got-dance.gif", (req, res) => {
+  res.sendFile(path.join(__dirname, "/img/got-dance.gif"));
+});
 
+// catch-all
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
