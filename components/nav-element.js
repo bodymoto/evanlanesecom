@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 
+
 export class NavElement extends LitElement {
 	static styles = css`
 		* {
@@ -31,7 +32,8 @@ export class NavElement extends LitElement {
 	    }
     nav {
 	    	display: flex;
-	    	gap: 15px;
+	    	gap: 5px;
+	    	margin-left: 10px;
 	    }
 	`;
 
@@ -46,6 +48,7 @@ export class NavElement extends LitElement {
 			<nav>
 				<a href="/">home</a>
 	  		<a href="/about">about</a>
+	  		<a href="/dance">dance</a>
 	  	</nav>
 	  </header>
 		`;
