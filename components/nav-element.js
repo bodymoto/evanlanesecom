@@ -32,7 +32,7 @@ export class NavElement extends LitElement {
 	    }
     nav {
 	    	display: flex;
-	    	gap: 5px;
+	    	gap: 15px;
 	    	margin-left: 10px;
 	    }
 	`;
@@ -48,7 +48,6 @@ export class NavElement extends LitElement {
 			<nav>
 				<a href="/">home</a>
 	  		<a href="/about">about</a>
-	  		<a href="/dance">dance</a>
 	  	</nav>
 	  </header>
 		`;
