@@ -21,7 +21,7 @@ export class TyrionElement extends LitElement {
 	    }
 	  .square {
 	  		border: 1px solid black;
-	  		background-color: darkorange;
+	  		background-color: #fff;
 		  	width: 35px;
 		  	height: 35px;
 				transition: 0.2s;
@@ -32,14 +32,15 @@ export class TyrionElement extends LitElement {
 			}
 		.fade {
 				animation-name: fade;
-				animation-duration: 7s;
+				animation-duration: 2s;
 				animation-fill-mode: forwards;
+				animation-timing-function: linear;
 				opacity: 1;
 			}
 		@keyframes fade {
 				to {
 					opacity: 0;
-					transform: rotateZ(1060deg);
+					transform: rotateZ(1440deg) scale(2);
 				}
 			}
 		button {
