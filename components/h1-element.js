@@ -1,7 +1,7 @@
 import {LitElement, html, css} from 'lit';
 
 
-export class TypingElement extends LitElement {
+export class H1Element extends LitElement {
 	static styles = css`
 		* {
 	      margin: 0;
@@ -11,19 +11,14 @@ export class TypingElement extends LitElement {
 
     #main {
 	    	display: flex;
+	    	align-content: center;
 	    }
-
-	  #cursor {
-		  	width: 11px;
-		  	height: 18px;
-		  	border: 1px solid black;
-		  }
 
 		.blink {
 				border-right: 2px solid black;
-				height: 16px;
-				padding-left: 5px;
-				margin-top: 6px;
+				height: 34px;
+				padding-left: 10px;
+				margin-top: 7px;
 				animation-name: blink;
 				animation-duration: 1s;
 				animation-fill-mode: forwards;
@@ -40,10 +35,16 @@ export class TypingElement extends LitElement {
 					border-right: none;
 				}
 			}
+
 		#text {
-				display: flex;
 				padding: 5px;
 				margin-left: -4px;
+			}
+		#text h1 {
+				display: flex;
+				font-size: 32px;
+				font-weight: 200;
+				margin-bottom: -10px;
 			}
 	  span {
 				visibility: hidden;
@@ -80,6 +81,12 @@ export class TypingElement extends LitElement {
 		span:nth-child(9) {
 				animation-delay: 1.8s;
 			}
+		span:nth-child(10) {
+				animation-delay: 1.9s;
+			}
+		span:nth-child(11) {
+				animation-delay: 2.0s;
+			}
 
 		@keyframes typing {
 				to {
@@ -102,19 +109,23 @@ export class TypingElement extends LitElement {
 		<div id="main">
 			<div class="blink"></div>
 			<div id="text">
-				<span>T</span>
-				<span>h</span>
-				<span>i</span>
-				<span>s</span>
-				<span> </span>
-				<span>T</span>
-				<span>h</span>
-				<span>a</span>
-				<span>t</span>
+				<h1>
+					<span>e</span>
+					<span>v</span>
+					<span>a</span>
+					<span>n</span>
+					<span> </span>
+					<span>l</span>
+					<span>a</span>
+					<span>n</span>
+					<span>e</span>
+					<span>s</span>
+					<span>e</span>
+				</h1>
 			</div>
 		</div>
 		`;
 	}
 }
 
-customElements.define('typing-element', TypingElement);
+customElements.define('h1-element', H1Element);
