@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { H1Element } from './h1-element.js';
 
 
 export class HomeElement extends LitElement {
@@ -63,11 +64,6 @@ export class HomeElement extends LitElement {
 		.intro {
 				grid-area: a;
 			}
-		.intro h1 {
-				font-size: 32px;
-				font-weight: 200;
-				margin-bottom: -10px;
-			}
 		.intro h2 {
 				font-size: 18px;
 				font-weight: 400;
@@ -107,18 +103,20 @@ export class HomeElement extends LitElement {
 			}
 
 		#image {
+				position: relative;
 				margin: auto;
 				margin-top: 75px;
 				width: 300px;
 				height: 300px;
 			}
-		img {
-				animation: ghost 12s infinite alternate ease;
+		.ghost img {
+				position: absolute;
+				animation: ghost 10s 2 alternate ease;
 				border-radius: 50%;
 				width: 100%;
 				height: 100%;
+				opacity: 0;
 			}
-
 		@keyframes ghost {
 				from {
 					opacity: 0;
@@ -130,6 +128,11 @@ export class HomeElement extends LitElement {
 					opacity: 0.8;
 				}
 			}
+
+		.og-pic img {
+				border-radius: 50%;
+			}
+
 
 		@media screen and (min-width: 768px) {
 			main {
@@ -155,7 +158,7 @@ export class HomeElement extends LitElement {
 			<section>
 				<div id="grid">
 					<div class="intro">
-						<h1>evan lanese</h1>
+						<h1-element></h1-element>
 						<h2>software developer</h2>
 						<p>front-end application</p>
 					</div>
@@ -186,7 +189,12 @@ export class HomeElement extends LitElement {
 				</div>
 			</section>
 			<div id="image">
-				<img src="../img/colo.png" alt="Hiking in the Colorado Mountains." />
+				<div class="ghost">
+					<img src="../img/colo-hi.png" alt="Hiking in the Colorado Mountains." />
+				</div>
+				<div class="og-pic">
+					<img src="../img/colo.png" alt="Hiking in the Colorado Mountains." />
+				</div>
 			</div>
 		</main>
 		`;
