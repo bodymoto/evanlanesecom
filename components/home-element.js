@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit';
+import { VideoElement } from './video-element.js';
 import { H1Element } from './h1-element.js';
+import { ImageElement } from './image-element.js';
 
 
 export class HomeElement extends LitElement {
@@ -12,32 +14,45 @@ export class HomeElement extends LitElement {
     a:link,
     a:visited,
     a:active {
-    		color: black;
+    		color: #30A2FF;
+    		font-weight: 600;
     		text-decoration: none;
     		text-transform: uppercase;
+    		z-index: 3;
     	}
     a:hover {
     		color: darkorange;
-    		font-weight: 700;
 	    	transition: 0.3s;
-	    	transform: scale(1.1);
+	    	margin-right: 5px;
+	    	margin-left: 5px;
 	    }
+
 	  main {
-		  	position: relative;
-		  	height: 90vh;
+	  		display: grid;
+	  		grid-template-columns: 1fr 1fr 1fr;
+	  		grid-template-rows: repeat(12, 1fr);
+		  	height: calc(100vh - 85px);
 		  }
-    video {
-    		position: absolute;
-    		object-fit: cover;
-	    	width: 100%;
-	    	height: 100%;
-	    	z-index: -1;
+
+		#video {
+				grid-column: 1 / 4;
+				grid-row: 1 / 13;
+				position: relative;
+	    	top: 0;
+	    	right: 0;
+	    	bottom: 0;
+    		overflow: hidden;
+	    	left: 0;			
 	    }
+
 	  section {
+	  		grid-column: 1 / 4;
+				grid-row: 1 / 8;
 		  	margin: 5px;
 		  	padding-top: 60px;
 		  	text-transform: uppercase;
 		  }
+
 		#grid {
 				display: grid;
 				gap: 5px;
@@ -49,52 +64,69 @@ export class HomeElement extends LitElement {
 					"c e"
 					"d e";
 			}
-		.intro, .bodyboon, .github, .social {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				padding: 5px;
-			}
-		.intro, .bodyboon, .github, .social, .skill {
+
+		.name-title, 
+		.bodyboon, 
+		.github, 
+		.linkedin, 
+		.skills {
 				background: #fff;
 				border-radius: 5px;
 				width: 100%;
 			}
-		.intro {
+		.name-title {
 				grid-area: a;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 			}
-		.intro h2 {
+		.name-title h2 {
 				font-size: 18px;
 				font-weight: 400;
 				padding: 7px;
 				margin-left: 12px;
 				margin-bottom: -10px;
 			}
-		.intro p {
+		.name-title p {
 				font-size: 14px;
 				margin-left: 30px;
-				opacity: 0.6;
 			}
 		.bodyboon {
 				grid-area: b;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
 			}
 		.github {
 				grid-area: c;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
 			}
-		.social {
+		.linkedin {
 				grid-area: d;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
 			}
-		.bodyboon p, .github p, .social p {
+
+		.bodyboon p,
+		.github p,
+		.linkedin p {
 				font-size: 13px;
 			}
-		.skill {
+		.skills {
 				grid-area: e;
 				font-size: 14px;
 				text-align: center;
-				margin: auto;
 				padding: 20px 0;
+				margin: auto;
 			}
+
 		ul {
 				list-style-type: none;
 			}
@@ -103,42 +135,44 @@ export class HomeElement extends LitElement {
 			}
 
 		#image {
+				grid-column: 1 / 4;
+				grid-row: 7 / 12;
 				position: relative;
-				margin: auto;
-				margin-top: 75px;
 				width: 300px;
 				height: 300px;
-			}
-		.ghost img {
-				position: absolute;
-				animation: ghost 10s 2 alternate ease;
-				border-radius: 50%;
-				width: 100%;
-				height: 100%;
-				opacity: 0;
-			}
-		@keyframes ghost {
-				from {
-					opacity: 0;
-				}
-				30% {
-					opacity: 0;
-				}
-				to {
-					opacity: 0.8;
-				}
-			}
-
-		.og-pic img {
-				border-radius: 50%;
+				margin: auto;
 			}
 
 
 		@media screen and (min-width: 768px) {
 			main {
-				min-height: 768px;
-		  	max-height: 1024px;
-		  }
+					min-height: 768px;
+			  }
+
+			#grid {
+					max-width: 728px;
+					margin: auto;
+				}
+
+		  .name-title h2 {
+					font-size: 22px;
+					padding: 7px;
+					margin-left: 12px;
+					margin-bottom: -10px;
+				}
+			.name-title p {
+					font-size: 18px;
+					margin-left: 30px;
+					margin-bottom: 10px;
+				}
+			.bodyboon p,
+			.github p,
+			.linkedin p {
+					font-size: 18px;
+				}
+			.skills {
+					font-size: 18px;
+				}
 		}
 	`;
 
@@ -149,31 +183,38 @@ export class HomeElement extends LitElement {
   render () {
     return html`
 		<main>
-			<div>
-				<video autoplay loop muted>
-					<source src="../video/pexels-lam-loi-3492325-1280x720-31fps.mp4">
-				</video>
+			<div id="video">
+				<video-element></video-element>
 			</div>
 
 			<section>
 				<div id="grid">
-					<div class="intro">
+					<div class="name-title">
 						<h1-element></h1-element>
 						<h2>software developer</h2>
 						<p>front-end application</p>
 					</div>
 
 					<div class="bodyboon">
-						<a router-ignore href="https://bodyboon.com" target="_blank"><p>www.<b>bodyboon</b>.com (latest work)</p></a>
-					</div>
-					<div class="github">
-						<a router-ignore href="https://github.com/boshimoto" target="_blank"><p>www.<b>github</b>.com</p></a>
-					</div>
-					<div class="social">
-						<a router-ignore href="https://linkedin.com/in/evanlanese" target="_blank"><p>www.<b>linkedin</b>.com</p></a>
+						<p>www.</p>
+						<a router-ignore href="https://bodyboon.com" target="_blank">bodyboon</a>
+						<p>.com</p>
+						<p>(latest work)</p>
 					</div>
 
-					<div class="skill">
+					<div class="github">
+						<p>www.</p>
+						<a router-ignore href="https://github.com/boshimoto" target="_blank">github</a>
+						<p>.com</p>
+					</div>
+
+					<div class="linkedin">
+						<p>www.</p>
+						<a router-ignore href="https://linkedin.com/in/evanlanese" target="_blank">linkedin</a>
+						<p>.com</p>
+					</div>
+
+					<div class="skills">
 						<ul>
 							<li>javascript</li>
 							<li>html/css</li>
@@ -188,13 +229,9 @@ export class HomeElement extends LitElement {
 					</div>
 				</div>
 			</section>
+
 			<div id="image">
-				<div class="ghost">
-					<img src="../img/colo-hi.png" alt="Hiking in the Colorado Mountains." />
-				</div>
-				<div class="og-pic">
-					<img src="../img/colo.png" alt="Hiking in the Colorado Mountains." />
-				</div>
+				<image-element></image-element>
 			</div>
 		</main>
 		`;
