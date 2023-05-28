@@ -23,7 +23,7 @@ export class AboutElement extends LitElement {
 				grid-row: 1 / 2;
 				display: grid;
 				grid-template-columns: 1fr;
-	  		grid-template-rows: repeat(2, 1fr);
+	  		grid-template-rows: 1fr 2fr;
 	  		align-items: center;
 	  		justify-items: center;
 	    }
@@ -54,6 +54,12 @@ export class AboutElement extends LitElement {
 				line-height: 24px;
 				padding: 10px;
 				padding-left: 20px;
+			}
+		p:nth-child(9) {
+				font-weight: 700;
+				font-style: italic;
+				text-align: center;
+				padding: 20px;
 			}
 
     #image {
@@ -130,8 +136,10 @@ export class AboutElement extends LitElement {
 						<p>A stubborn optimist, I find creative solutions to achieve my goals & challenge conventional expectations.</p>
 						<p>Since 2020, my passion is being immersed in programming. Learning through online courseware, free tutorials, 1:1 mentorship, & months-on-end practice.</p>
 						<p>I enjoy hiking, camping, being barefoot, & spiritual pursuits the most.</p>
-						<p>I've driven 3,000+ miles twice cross country. Seen 25 different states. Hiked the Rockies, Sierra's, Appalacian. Swam in the Gulf of Thailand & Andaman Sea. And visiting 2 foreign countries.</p>
-						<p>Today, I live as an expat in Thailand, continuing to hone my software skills, &, as of April, working fulltime on www.bodyboon.com.</p>
+						<p>I've driven 3,000+ miles twice cross country. Seen 25 different states. Hiked the Rockies, Sierra's, Appalachian. Swam in the Gulf of Thailand & Andaman Sea. And visited 2 foreign countries.</p>
+						<p>Today, I live as an expat in northern Thailand, continuing to hone my software skills, & working fulltime on www.bodyboon.com.</p>
+						<p>How to Contact:<br/>
+						evan [at] bodyboon [dot] com</p>
 					</div>
 
 					<div id="image">
