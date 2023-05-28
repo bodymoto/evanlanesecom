@@ -1,7 +1,7 @@
 import {LitElement, html, css} from 'lit';
 
 
-export class NavElement extends LitElement {
+export class HeaderElement extends LitElement {
 	static styles = css`
 		* {
 	      margin: 0;
@@ -19,17 +19,17 @@ export class NavElement extends LitElement {
     	}
 
     header {
-    		height: 10vh;
+    		font-size: 20px;
     		display: flex;
     		align-items: center;
     		justify-content: space-between;
+    		height: 85px;
     		padding: 20px;
-    		font-size: 20px;
     	}
     nav {
 	    	display: flex;
 	    	gap: 15px;
-	    	margin-left: 10px;
+	    	margin-right: 10px;
 	    }
 	`;
 
@@ -52,4 +52,4 @@ export class NavElement extends LitElement {
 	}
 }
 
-customElements.define('nav-element', NavElement);
+customElements.define('header-element', HeaderElement);
