@@ -15,7 +15,7 @@ export class VideoElement extends LitElement {
 
 	render() {
 		return html`
-		<video autoplay loop muted>
+		<video autoplay="true" loop="true" muted="true">
 			<source src="../video/pexels-lam-loi-3492325-1280x720-31fps.mp4">
 		</video>
 		`;
