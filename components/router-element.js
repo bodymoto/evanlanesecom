@@ -1,5 +1,5 @@
 import {LitElement, html, css} from 'lit';
-import {HeaderElement} from './header-element.js';
+import {HeaderElement} from './header/header-element.js';
 
 
 export class RouterElement extends LitElement {
