@@ -46,7 +46,7 @@ export class HeaderElement extends LitElement {
 		return html`
 		<header>
 			<a href="/">
-				<img width="102" height="52" src="../img/helloevandev-logo.png" alt="site logo"/>
+				<img width="102" height="52" src="../img/helloevandev.webp" alt="site logo"/>
 			</a>
 			<nav>
 				<a href="/">home</a>
