@@ -217,14 +217,15 @@ export class HomeElement extends LitElement {
 					<div class="skills">
 						<ul>
 							<li>javascript</li>
+							<li>python</li>
 							<li>html/css</li>
+							<li>web components</li>
 							<li>lit</li>
 							<li>express</li>
-							<li>node</li>
-							<li>git</li>
 							<li>webpack</li>
 							<li>babel</li>
-							<li>web components</li>
+							<li>node</li>
+							<li>git</li>
 						</ul>
 					</div>
 				</div>
