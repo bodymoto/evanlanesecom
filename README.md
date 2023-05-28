@@ -1,4 +1,4 @@
-# evanlanese.com
+# [www.evanlanese.com](https://evanlanese.com/)
 
 My personal website, launched in May 2023, replacing my previous [interactive-website](https://github.com/boshimoto/interactive-website).<br/>
 Powered by Web Components and built with the Lit framework for efficient development.<br/>
