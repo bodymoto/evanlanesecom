@@ -16,13 +16,13 @@ export class H1Element extends LitElement {
 
 		.blink {
 				border-right: 2px solid black;
-				height: 34px;
-				padding-left: 10px;
-				margin-top: 7px;
 				animation-name: blink;
 				animation-duration: 1s;
 				animation-fill-mode: forwards;
 				animation-iteration-count: 1;
+				height: 32px;
+				padding-left: 10px;
+				margin-top: 7px;
 			}
 		@keyframes blink {
 				from {
@@ -47,11 +47,11 @@ export class H1Element extends LitElement {
 				margin-bottom: -10px;
 			}
 	  span {
-				visibility: hidden;
+				border-right: 2px solid black;
 				animation-name: typing, border;
 				animation-duration: 1s, 0.3s;
 				animation-fill-mode: forwards, forwards;
-				border-right: 2px solid black;
+				visibility: hidden;
 		  }
 		span:nth-child(1) {
 				animation-delay: 1s;
@@ -87,7 +87,6 @@ export class H1Element extends LitElement {
 		span:nth-child(11) {
 				animation-delay: 2.0s;
 			}
-
 		@keyframes typing {
 				to {
 					visibility: visible;
@@ -98,6 +97,23 @@ export class H1Element extends LitElement {
 					border: none;
 				}
 			}
+
+
+		@media screen and (min-width: 728px) {
+			.blink {
+					height: 44px;
+				}
+			#text {
+					padding: 5px;
+					margin-left: -4px;
+				}
+			#text h1 {
+					display: flex;
+					font-size: 42px;
+					font-weight: 200;
+					margin-bottom: -10px;
+				}
+		}
 	`;
 
 	constructor() {
