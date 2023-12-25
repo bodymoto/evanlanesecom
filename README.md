@@ -3,4 +3,4 @@
 
 A personal website.<br/>
 Mobile responsive design using CSS grid/flex.<br/>
-JavaScript Web components · the Lit library · Babel · Webpack
+JavaScript · Web Components · the Lit library · Babel · Webpack
