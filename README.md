@@ -1,4 +1,5 @@
-# [evanlanese.com](https://evanlanese.com/)
+# evanlanese.com
+*(currently not live due to prioritization of other developments)*
 
 A personal website.<br/>
 <br/>
