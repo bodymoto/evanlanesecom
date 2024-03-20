@@ -1,5 +1,3 @@
-# evanlanese.com
-*(currently not live due to prioritization of other developments)*
+*(currently not live due to the prioritization of other developments)*
 
-A personal website.<br/>
-Responsive mobile design · CSS Grid/Flex · Web components · the Lit library · Babel · Webpack
+A personal website, built for fun using web components.
